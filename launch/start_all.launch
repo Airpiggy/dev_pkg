@@ -1,0 +1,13 @@
+<launch>
+    <!-- start realsense d435i camera launch file --> 
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+
+    <!-- start livox MID360 msg publisher launch file -->
+    <include file="$(find livox_ros_driver2)/launch_ROS1/msg_MID360.launch"/>
+
+    <!-- start the soft sync msg publisher launch file -->
+    <include file="$(find dev_pkg)/launch/soft_sync.launch"/>
+
+    <!-- start the fast-livo launch file -->
+    <include file="$(find fast_livo)/launch/mapping_avia.launch"/>
+</launch>
